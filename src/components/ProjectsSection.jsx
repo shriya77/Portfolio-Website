@@ -8,14 +8,17 @@ export const ProjectsSection = () => {
     <section id="waitlist" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-[hsl(var(--foreground))]">
-          Be Part of Materna's First Circle<span className="text-primary"></span>
+          THIS IS YOUR SUMMONS
         </h2>
 
         <p className="text-center text-[hsl(var(--foreground))] mb-10 max-w-xl mx-auto">
-          We're building a space just for you. Sign up to get early access, sneak peeks, and a warm welcome when we launch.
+          Join the waitlist or continue pretending you’re okay with parenting forums run by people named Brenda.
         </p>
 
         <div className="card-glass p-8 max-w-lg mx-auto">
+          <p className="text-lg md:text-xl font-semibold text-center text-[hsl(var(--foreground))] mb-6 italic">
+            Email. Now. Before Brenda wins.
+          </p>
           <form
             className="space-y-4 text-center"
             onSubmit={async (e) => {
