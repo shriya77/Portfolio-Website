@@ -28,7 +28,7 @@ export const HeroSection = () => {
         </h1>
 
         <p className="text-xl md:text-2xl font-medium">
-          Unlimited support for every mother...
+          Unlimited support for every mother
         </p>
 
         <p className="text-lg font-mono italic text-foreground h-10 transition-opacity duration-300">
