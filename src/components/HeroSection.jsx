@@ -28,7 +28,7 @@ export const HeroSection = () => {
         </h1>
 
         <p className="text-xl md:text-2xl font-medium">
-          You’re entering the pregnancy underground...
+          Unlimited support for every mother...
         </p>
 
         <p className="text-lg font-mono italic text-foreground h-10 transition-opacity duration-300">

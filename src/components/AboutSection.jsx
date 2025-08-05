@@ -16,11 +16,11 @@ export const AboutSection = () => {
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <Apple className="mt-1 shrink-0 text-primary" />
-            <p className="max-w-lg"><strong>A no BS symptom/mood tracker</strong> that won’t judge you</p>
+            <p className="max-w-lg"><strong>A symptom/mood tracker</strong> that won’t judge you and gives advice based on your entries</p>
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <MessageCircle className="mt-1 shrink-0 text-primary" />
-            <p className="max-w-lg"><strong>Emotionally intelligent and very sweet AI chat</strong></p>
+            <p className="max-w-lg"><strong>Emotionally intelligent and very sweet AI chatbot</strong></p>
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <MessageCircle className="mt-1 shrink-0 text-primary" />
@@ -28,7 +28,7 @@ export const AboutSection = () => {
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <MessageCircle className="mt-1 shrink-0 text-primary" />
-            <p className="max-w-lg"><strong>Memes, rants, group sobbing</strong>: the good stuff</p>
+            <p className="max-w-lg"><strong>Memes, rants, wellness tips</strong>: the good stuff</p>
           </div>
         </div>
       </div>
