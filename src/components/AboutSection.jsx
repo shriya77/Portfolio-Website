@@ -1,4 +1,4 @@
-import { Apple, MessageCircle, CalendarCheck } from "lucide-react";
+import { Apple, MessageCircle, CalendarCheck, BotMessageSquare, Calendar } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -15,12 +15,12 @@ export const AboutSection = () => {
             <p className="max-w-lg"><strong>Emergency advice</strong> for when your body's doing parkour</p>
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
-            <Apple className="mt-1 shrink-0 text-primary" />
+            <Calendar className="mt-1 shrink-0 text-primary" />
             <p className="max-w-lg"><strong>A symptom/mood tracker</strong> that gives real advice for YOU</p>
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
-            <MessageCircle className="mt-1 shrink-0 text-primary" />
-            <p className="max-w-lg"><strong>Emotionally intelligent and very sweet AI chatbot</strong></p>
+            <BotMessageSquare className="mt-1 shrink-0 text-primary" />
+            <p className="max-w-lg"><strong>Emotionally intelligent</strong> and very sweet AI chatbot</p>
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <MessageCircle className="mt-1 shrink-0 text-primary" />
@@ -28,7 +28,11 @@ export const AboutSection = () => {
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <MessageCircle className="mt-1 shrink-0 text-primary" />
-            <p className="max-w-lg"><strong>Memes, rants, wellness tips</strong>: the good stuff</p>
+            <p className="max-w-lg"><strong>Health reminders, wellness tips</strong>: the good stuff</p>
+          </div>
+          <div className="flex items-center gap-4 justify-center text-center">
+            <MessageCircle className="mt-1 shrink-0 text-primary" />
+            <p className="max-w-lg"><strong>Postpartum: </strong>vaccine reminders, baby milestones and more</p>
           </div>
         </div>
       </div>

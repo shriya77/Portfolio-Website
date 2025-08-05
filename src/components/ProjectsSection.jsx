@@ -11,8 +11,8 @@ export const ProjectsSection = () => {
           THIS IS YOUR MOMENT
         </h2>
 
-        <p className="text-center text-[hsl(var(--foreground))] mb-10 max-w-xl mx-auto">
-          Join the waitlist or continue pretending you’re okay with parenting forums run by people named Brenda.
+        <p className="text-center text-[hsl(var(--foreground))] mb-10 max-w-l mx-auto">
+          Join the waitlist or continue pretending you’re okay surving on parenting forums run by Brenda.
         </p>
 
         <div className="card-glass p-8 max-w-lg mx-auto">
