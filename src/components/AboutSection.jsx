@@ -16,7 +16,7 @@ export const AboutSection = () => {
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <Apple className="mt-1 shrink-0 text-primary" />
-            <p className="max-w-lg"><strong>A symptom/mood tracker</strong> that won’t judge you and gives advice based on your entries</p>
+            <p className="max-w-lg"><strong>A symptom/mood tracker</strong> that gives real advice for YOU</p>
           </div>
           <div className="flex items-center gap-4 justify-center text-center">
             <MessageCircle className="mt-1 shrink-0 text-primary" />
