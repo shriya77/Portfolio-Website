@@ -35,9 +35,8 @@ export const SkillsSection = () => {
         </h2>
 
         <ul className="space-y-6 text-lg font-medium text-[hsl(var(--foreground))]">
-           <li>• tech bros who think ChatGPT can replace empathy</li>
-           <li>• people who say “just sleep when the baby sleeps”</li>
-           <li>• moms who have it all figured out</li>
+           <li>• Tech bros who think ChatGPT can replace empathy</li>
+           <li>• People who say “just sleep when the baby sleeps”</li>
         </ul>
       </div>
     </section>
