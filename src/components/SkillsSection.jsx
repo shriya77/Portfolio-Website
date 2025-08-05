@@ -31,7 +31,7 @@ export const SkillsSection = () => {
     <section id="notforeveryone" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-3xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          🤯 WARNING: This app is <span className="text-primary">NOT</span> for:
+         WARNING: This app is <span className="text-primary">NOT</span> for:
         </h2>
 
         <ul className="space-y-6 text-lg font-medium text-[hsl(var(--foreground))]">
