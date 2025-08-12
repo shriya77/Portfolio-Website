@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 
 const phrases = [
-  "your uterus deserves better.",
+  "you deserve better.",
   "we’ve seen things.",
   "materna is the group chat, but smarter.",
 ];
