@@ -17,7 +17,7 @@ export const ProjectsSection = () => {
 
         <div className="card-glass p-8 max-w-lg mx-auto">
           <p className="text-lg md:text-xl font-semibold text-center text-[hsl(var(--foreground))] mb-6 italic">
-            Chance to win Amazon Gift Card. <br></br>Winner chosen end of August. If your friend signs up and they win, you win!
+            Win an Amazon Gift Card.<br></br>Winner chosen end of August. If your friend signs up and they win, you win!
           </p>
           <form
             className="space-y-4 text-center"
