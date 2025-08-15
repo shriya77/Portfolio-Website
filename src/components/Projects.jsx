@@ -27,7 +27,7 @@ const CATEGORIES = [
     projects: [
       {
         title: "Mortgage Document Analysis",
-        img: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+        img: "https://gdm-catalog-fmapi-prod.imgix.net/ProviderLogo/704c1a5b-249b-4c48-9b9f-a2c399226bb3.png",
         desc: "Currently doing this for my Outamation externship @ Extern",
         tags: ["RAG", "OCR", "LlamaIndex", "PyMuPDF"],
         links: [
@@ -37,7 +37,7 @@ const CATEGORIES = [
       },
       {
         title: "CrisisGuard",
-        img: "https://images.unsplash.com/photo-1551281044-8a5d2e9f7a2b?q=80&w=1200&auto=format&fit=crop",
+        img: "src/assets/crisisguard.png",
         desc: "AI-powered system that detects risks like power outages, fires, and floods and provides assistance. 4th Place at Hack Reason.",
         tags: ["Prolog", "sCASP"],
         links: [
@@ -54,7 +54,7 @@ const CATEGORIES = [
     projects: [
       {
         title: "Lumina @ ACM Projects",
-        img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+        img: "src/assets/lumina.png",
         desc: "Built frontend for astronomy app; integrated APIs for data visualization. Won Best Design Award in industry-judged competition.",
         tags: ["React Native", "AWS", "Figma"],
         links: [
@@ -64,7 +64,7 @@ const CATEGORIES = [
       },
       {
         title: "VisioNari",
-        img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
+        img: "src/assets/visionari.png",
         desc: "Leading full-stack web dev for multilingual women’s empowerment bootcamp site for 300+ users. Built registration system and boosted mobile responsiveness.",
         tags: ["HTML", "CSS", "JavaScript", "Python"],
         links: [
@@ -74,7 +74,7 @@ const CATEGORIES = [
       },
       {
         title: "Portfolio Website",
-        img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
+        img: "src/assets/portfolio.png",
         desc: "The website you are seeing right now :)",
         tags: ["React", "Vite", "JavaScript"],
         links: [
@@ -89,7 +89,7 @@ const CATEGORIES = [
     projects: [
       {
         title: "Materna",
-        img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
+        img: "src/assets/Materna.png",
         desc: "AI powered maternal health app placed 2nd out of 350+ teams at Axxess Hackathon. Now transforming into launch ready product.",
         tags: ["React", "Vite", "Django", "Firebase", "OpenAI"],
         links: [
@@ -109,7 +109,7 @@ const CATEGORIES = [
     projects: [
       {
         title: "RealtyCheck",
-        img: "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop",
+        img: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/360/739/datas/original.png",
         desc: "A smart, no-fluff web app that helps real estate investors make safe and smart decisions.",
         tags: ["HTML", "CSS", "JavaScript"],
         links: [
@@ -126,7 +126,7 @@ const CATEGORIES = [
     projects: [
       {
         title: "MeteorMate",
-        img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
+        img: "https://media.licdn.com/dms/image/v2/D4D0BAQHQF-cW22psJw/company-logo_400_400/B4DZUnRJEsHYAY-/0/1740120560592/meteor_mate_logo?e=1758153600&v=beta&t=z52GzY7uAX13lF3iOvd78idU9eXv0805ZsxJdvBU-6A",
         desc: "Designed roommate-matching app and branding for UT Dallas students. Created Figma prototypes and logo.",
         tags: ["Figma", "Canva"],
         links: [
