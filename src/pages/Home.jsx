@@ -1,9 +1,9 @@
 import { Navbar } from "../components/Navbar";
-import { HeroSection } from "../components/HeroSection";
-import { AboutSection } from "../components/WorkExperience";
-import { SkillsSection } from "../components/SkillsSection";
-import { ProjectsSection } from "../components/ProjectsSection";
-import { ContactSection } from "../components/ContactSection";
+import { HeroSection } from "../components/Hero";
+import { AboutSection } from "../components/Experience";
+import { SkillsSection } from "../components/Skills";
+import { ProjectsSection } from "../components/Projects";
+import { ContactSection } from "../components/Contact";
 import { Footer } from "../components/Footer";
 
 const PALETTE = {
