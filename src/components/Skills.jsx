@@ -39,7 +39,7 @@ export const SkillsSection = () => {
 
   return (
     <section
-      id="skills-wheel"
+      id="skills"
       className="relative flex flex-col items-center justify-center py-24 px-4 bg-secondary/30 min-h-[400px]"
     >
       <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white text-center mb-12">My Skills</h2>

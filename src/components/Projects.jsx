@@ -26,20 +26,24 @@ const CATEGORIES = [
     gradient: PALETTE.offWhite,
     projects: [
       {
-        title: "Vision QA Agent",
+        title: "Mortgage Document Analysis",
         img: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
-        desc: "Multimodal RAG agent that answers questions about product photos with tool use and memory.",
-        tags: ["RAG", "Vision", "LangChain"],
-        github: "#",
-        demo: "#",
+        desc: "Currently doing this for my Outamation externship @ Extern",
+        tags: ["RAG", "OCR", "LlamaIndex", "PyMuPDF"],
+        links: [
+          { label: "GitHub", url: "https://github.com/shriya77/AI-automated-document-analysis/" },
+          { label: "Live Demo", url: "#" },
+        ],
       },
       {
-        title: "Tiny LLM Trainer",
+        title: "CrisisGuard",
         img: "https://images.unsplash.com/photo-1551281044-8a5d2e9f7a2b?q=80&w=1200&auto=format&fit=crop",
-        desc: "LoRA fine-tuning pipeline with experiment dashboard and dataset curation tooling.",
-        tags: ["LoRA", "CUDA", "Weights & Biases"],
-        github: "#",
-        demo: "#",
+        desc: "AI-powered system that detects risks like power outages, fires, and floods and provides assistance. 4th Place at Hack Reason.",
+        tags: ["Prolog", "sCASP"],
+        links: [
+          { label: "GitHub", url: "https://github.com/maryamkofo/CrisisGuard" },
+          { label: "Live Demo", url: "https://devpost.com/software/crisisguard" },
+        ],
       },
     ],
   },
@@ -49,20 +53,32 @@ const CATEGORIES = [
     gradient: PALETTE.offWhite,
     projects: [
       {
-        title: "Realtime Collab Docs",
+        title: "Lumina @ ACM Projects",
         img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
-        desc: "End-to-end encrypted Notion-like editor with presence cursors and offline sync.",
-        tags: ["CRDT", "WebSockets", "Postgres"],
-        github: "#",
-        demo: "#",
+        desc: "Built frontend for astronomy app; integrated APIs for data visualization. Won Best Design Award in industry-judged competition.",
+        tags: ["React Native", "AWS", "Figma"],
+        links: [
+          { label: "GitHub", url: "https://github.com/acm-projects/Lumina" },
+          { label: "Figma", url: "https://www.figma.com/design/lHUgo0x2pnUSL57vo08s63/Lumina-App-Designs?node-id=594-402&p=f&t=rmlByaVWu8ZiI68L-0" },
+        ],
       },
       {
-        title: "Serverless Commerce",
+        title: "VisioNari",
         img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-        desc: "Headless storefront + admin with Edge functions and image CDN.",
-        tags: ["Next.js", "Stripe", "Edge"],
-        github: "#",
-        demo: "#",
+        desc: "Leading full-stack web dev for multilingual women’s empowerment bootcamp site for 300+ users. Built registration system and boosted mobile responsiveness.",
+        tags: ["HTML", "CSS", "JavaScript", "Python"],
+        links: [
+          { label: "Live Demo", url: "https://visionari-women.netlify.app/" },
+          { label: "Live Demo", url: "https://visionari-tutors.netlify.app/" },
+        ],
+      },
+      {
+        title: "Portfolio Website",
+        img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
+        desc: "The website you are seeing right now :)",
+        tags: ["React", "Vite", "JavaScript"],
+        links: [
+        ],
       },
     ],
   },
@@ -72,12 +88,17 @@ const CATEGORIES = [
     gradient: PALETTE.offWhite,
     projects: [
       {
-        title: "Glucose Guardian",
+        title: "Materna",
         img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
-        desc: "CGM anomaly detection and meal logging with privacy-first analytics.",
-        tags: ["Time Series", "React Native", "Privacy"],
-        github: "#",
-        demo: "#",
+        desc: "AI powered maternal health app placed 2nd out of 350+ teams at Axxess Hackathon. Now transforming into launch ready product.",
+        tags: ["React", "Vite", "Django", "Firebase", "OpenAI"],
+        links: [
+          { label: "GitHub", url: "https://github.com/shriya77/Materna-app" },
+          { label: "LinkedIn", url: "https://www.linkedin.com/company/materna-women/" },
+          { label: "Instagram", url: "https://www.instagram.com/materna.health/" },
+          { label: "Hackathon ver", url: "https://devpost.com/software/materna" },
+          { label: "Live Demo", url: "https://materna-mothers.netlify.app/" },
+        ],
       },
     ],
   },
@@ -87,12 +108,14 @@ const CATEGORIES = [
     gradient: PALETTE.offWhite,
     projects: [
       {
-        title: "AlphaBacktester",
+        title: "RealtyCheck",
         img: "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop",
-        desc: "High-speed factor research and portfolio optimization playground.",
-        tags: ["Pandas", "PyTorch", "Optimization"],
-        github: "#",
-        demo: "#",
+        desc: "A smart, no-fluff web app that helps real estate investors make safe and smart decisions.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        links: [
+          { label: "GitHub", url: "https://github.com/VaishnaviSiravuri/RealityCheck" },
+          { label: "Live Demo", url: "https://devpost.com/software/realty-check" },
+        ],
       },
     ],
   },
@@ -102,12 +125,13 @@ const CATEGORIES = [
     gradient: PALETTE.offWhite,
     projects: [
       {
-        title: "FeatherUI",
+        title: "MeteorMate",
         img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
-        desc: "Zero-config Tailwind + Motion component kit with dark-mode tokens.",
-        tags: ["Tailwind", "Framer Motion", "Storybook"],
-        github: "#",
-        demo: "#",
+        desc: "Designed roommate-matching app and branding for UT Dallas students. Created Figma prototypes and logo.",
+        tags: ["Figma", "Canva"],
+        links: [
+          { label: "LinkedIn", url: "https://www.linkedin.com/company/meteor-mate/posts/?feedView=all" },
+        ],
       },
     ],
   },
@@ -141,7 +165,7 @@ const ProjectCard = ({ p }) => (
     <div className="p-5">
       <h4 className="text-lg font-semibold" style={{ color: PALETTE.text }}>{p.title}</h4>
       <p className="mt-2 text-sm" style={{ color: PALETTE.textMuted }}>{p.desc}</p>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2 justify-center">
         {p.tags.map((t) => (
           <span
             key={t}
@@ -152,21 +176,23 @@ const ProjectCard = ({ p }) => (
           </span>
         ))}
       </div>
-      <div className="mt-5 flex gap-3">
-        <a
-          href={p.github}
-          className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition-colors"
-          style={{ background: PALETTE.base, color: PALETTE.text, border: "1px solid #e5e7eb" }}
-        >
-          <Github size={16} /> GitHub
-        </a>
-        <a
-          href={p.demo}
-          className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold"
-          style={{ background: PALETTE.primary, color: PALETTE.text }}
-        >
-          <ExternalLink size={16} /> Live Demo
-        </a>
+      <div className="mt-5 flex flex-wrap gap-3 justify-center">
+        {p.links?.map((link) => (
+          <a
+            key={link.label}
+            href={link.url}
+            className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition transform hover:scale-105 hover:bg-opacity-90"
+            style={{
+              background: PALETTE.primary,
+              color: PALETTE.text,
+              border: "1px solid #e5e7eb",
+            }}
+          >
+            {link.label === "GitHub" && <Github size={16} />}
+            {link.label === "Live Demo" && <ExternalLink size={16} />}
+            {link.label}
+          </a>
+        ))}
       </div>
     </div>
   </div>
