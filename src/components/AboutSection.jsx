@@ -2,49 +2,60 @@ import React, { useState, useRef, useEffect } from "react";
 
 const roles = [
   {
-    title: "Senior Frontend Developer",
+    title: "Software Engineering Intern",
     beforeImg: "https://media.tenor.com/t3dLLNaI50oAAAAM/cat-cats.gif",
     afterImg: "https://creatorset.com/cdn/shop/files/Green_Screen__cat_side_eye.png?v=1704921539",
-    impact:
-      "Led the redesign of the user interface which improved user engagement by 35% within six months.",
-    techStack: "React, Tailwind CSS, TypeScript",
-    duration: "Jan 2021 - Present",
+    impact: "Built a full-stack booking platform used by 10,000+ seniors with automated session matching.",
+    techStack: "React, JavaScript, Python",
+    duration: "Present (Tech Me Kid)",
   },
   {
-    title: "Product Manager",
+    title: "AI & Workflow Automation Extern",
     beforeImg: "https://media.tenor.com/t3dLLNaI50oAAAAM/cat-cats.gif",
     afterImg: "https://creatorset.com/cdn/shop/files/Green_Screen__cat_side_eye.png?v=1704921539",
-    impact:
-      "Directed cross-functional teams to launch new features, increasing customer retention by 20%.",
-    techStack: "Jira, Confluence, Slack",
-    duration: "Aug 2018 - Dec 2020",
+    impact: "Developed AI-powered OCR and document retrieval pipelines, improving mortgage processing speed by 70%.",
+    techStack: "Python, LlamaIndex, OCR",
+    duration: "Jun 2025 - Present (Outamation @ Extern)",
   },
   {
-    title: "UI/UX Designer",
+    title: "Founder and Developer",
     beforeImg: "https://media.tenor.com/t3dLLNaI50oAAAAM/cat-cats.gif",
     afterImg: "https://creatorset.com/cdn/shop/files/Green_Screen__cat_side_eye.png?v=1704921539",
-    impact:
-      "Designed intuitive interfaces that reduced user onboarding time by 50%.",
-    techStack: "Figma, Sketch, Adobe XD",
-    duration: "Jan 2017 - Jul 2018",
+    impact: "Built a maternal health app, won Axxess Hackathon, and now leading a 45-person team to 104 waitlist users launch product.",
+    techStack: "React, Django, Firebase, PostgreSQL",
+    duration: "Jan 2025 – Present (Materna)",
   },
   {
-    title: "Software Engineer Intern",
+    title: "Technical Lead – Web Development",
     beforeImg: "https://media.tenor.com/t3dLLNaI50oAAAAM/cat-cats.gif",
     afterImg: "https://creatorset.com/cdn/shop/files/Green_Screen__cat_side_eye.png?v=1704921539",
-    impact:
-      "Automated data pipelines, improving data processing efficiency by 40%.",
-    techStack: "Python, SQL, AWS",
-    duration: "Jun 2016 - Dec 2016",
+    impact: "Led dev of a multilingual site for 300+ users with a registration system reducing manual processing.",
+    techStack: "HTML, JavaScript, Flask",
+    duration: "Apr 2025 - Jul 2025 (VisioNari)",
   },
   {
-    title: "QA Analyst",
+    title: "Software Testing Intern",
     beforeImg: "https://media.tenor.com/t3dLLNaI50oAAAAM/cat-cats.gif",
     afterImg: "https://creatorset.com/cdn/shop/files/Green_Screen__cat_side_eye.png?v=1704921539",
-    impact:
-      "Developed automated test suites, reducing bug reports by 30%.",
-    techStack: "Selenium, Jest, Cypress",
-    duration: "Jan 2015 - May 2016",
+    impact: "Led QA cycles and test planning for 5 apps, improving release stability and operational efficiency.",
+    techStack: "QA, Agile, IoT",
+    duration: "Aug 2024 - Feb 2025 (Smartility)",
+  },
+  {
+    title: "Bioinformatics Research Intern",
+    beforeImg: "https://media.tenor.com/t3dLLNaI50oAAAAM/cat-cats.gif",
+    afterImg: "https://creatorset.com/cdn/shop/files/Green_Screen__cat_side_eye.png?v=1704921539",
+    impact: "Analyzed genomic data and implemented data pipelines, delivering key insights to the Genomics Department.",
+    techStack: "C, Bash, Python, Linux",
+    duration: "Jun 2023 - Jul 2023 (Monash University)",
+  },
+  {
+    title: "Project Manager",
+    beforeImg: "https://media.tenor.com/t3dLLNaI50oAAAAM/cat-cats.gif",
+    afterImg: "https://creatorset.com/cdn/shop/files/Green_Screen__cat_side_eye.png?v=1704921539",
+    impact: "Organized Python workshops and a global coding competition for 80+ girls across 8 countries.",
+    techStack: "Python, Project Management",
+    duration: "Nov 2022 - Aug 2023 (Girls in Code SEA)",
   },
 ];
 
