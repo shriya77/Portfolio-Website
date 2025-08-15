@@ -3,7 +3,8 @@ import { useEffect, useState, useRef } from "react";
 const getTimeAwareMessage = () => {
   const hour = new Date().getHours();
   if (hour >= 5 && hour < 12) return "Good morning.";
-  if (hour >= 12 && hour < 18) return "Good afternoon.";
+  if (hour >= 12 && hour < 16) return "Good afternoon.";
+  if (hour >= 16 && hour < 23) return "Good evening."
   return "Burning the midnight oil?";
 };
 
@@ -528,6 +529,12 @@ export const HeroSection = () => {
       )}
 
       <h1 style={headingStyle}>Hi, I’m Shriya.</h1>
+
+      <img
+        src="https://img.freepik.com/premium-vector/caution-work-progress-construction-zone_24886-2804.jpg"
+        alt="Work in progress"
+        style={{ maxWidth: "300px", width: "80%", margin: "1.5rem auto", display: "block", borderRadius: "12px" }}
+      />
 
       <div style={messageWrapperStyle} aria-live="polite" aria-atomic="true" role="text">
         <div style={bubbleContainerStyle}>
