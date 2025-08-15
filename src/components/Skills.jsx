@@ -22,12 +22,12 @@ const skills = [
   { name: "User Research", level: 75, category: "Certs & Others" },
   { name: "GitHub/Git", level: 90, category: "Certs & Others" },
   { name: "Relational Databases", level: 70, category: "Certs & Others" },
-  { name: "SEO Optimization Cert", level: 100, category: "Certs & Others" },
-  { name: "Communication", level: 95, category: "Soft Skills" },
-  { name: "Teamwork", level: 90, category: "Soft Skills" },
-  { name: "Problem Solving", level: 85, category: "Soft Skills" },
+  { name: "SEO Optimization", level: 100, category: "Certs & Others" },
+  { name: "Ownership", level: 95, category: "Soft Skills" },
+  { name: "Collaboration with cross-functional teams", level: 90, category: "Soft Skills" },
+  { name: "Resilience", level: 85, category: "Soft Skills" },
   { name: "Adaptability", level: 80, category: "Soft Skills" },
-  { name: "Leadership", level: 85, category: "Soft Skills" },
+  { name: "Entrepreneurship", level: 85, category: "Soft Skills" },
 ];
 
 const categories = ["Languages", "Frameworks", "Tools", "Certs & Others", "Soft Skills"];
