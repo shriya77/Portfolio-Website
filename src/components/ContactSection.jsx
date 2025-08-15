@@ -59,54 +59,54 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-white">
+          Get In <span className="text-white"> Touch</span>
         </h2>
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a question, idea, or just want to say hi? Whether you're a mom, a developer or a healthcare partner, we’d love to hear from you.
+        <p className="text-center text-white mb-12 max-w-2xl mx-auto">
+          Have a question, idea, or just want to say hi? <br></br>Dont hesitate to reach out, I have a 100% response rate.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6 text-left">
+            <h3 className="text-2xl font-semibold mb-6 text-left text-white">
               {" "}
               Contact Information
             </h3>
 
             <div className="space-y-6 justify-left">
               <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
+                <div className="p-3 rounded-full bg-white/10">
+                  <Mail className="h-6 w-6 text-white" />{" "}
                 </div>
                 <div>
                   <a
                     href="mailto:shriyakkx@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors pt-1"
+                    className="text-white hover:text-white transition-colors pt-1"
                   >
-                    materna.for.moms@gmail.com
+                    shriyakkx@gmail.com
                   </a>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
+                <div className="p-3 rounded-full bg-white/10">
+                  <Phone className="h-6 w-6 text-white" />{" "}
                 </div>
                 <div>
                   <a
-                    href="tel:+11234567890"
-                    className="text-muted-foreground hover:text-primary transition-colors pt-1"
+                    href="tel:+19453354766"
+                    className="text-white hover:text-white transition-colors pt-1"
                   >
                     +1 (945) 335-4766
                   </a>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
+                <div className="p-3 rounded-full bg-white/10">
+                  <MapPin className="h-6 w-6 text-white" />{" "}
                 </div>
                 <div>
-                  <a className="text-muted-foreground hover:text-primary transition-colors pt-1">
+                  <a className="text-white hover:text-white transition-colors pt-1">
                     Richardson, Texas, United States
                   </a>
                 </div>
@@ -114,35 +114,33 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4 text-left"> Connect With Us</h4>
+              <h4 className="font-medium mb-4 text-left text-white"> Connect With Us</h4>
               <div className="flex space-x-4 justify-left">
-                <a href="https://www.linkedin.com/company/materna-women" target="_blank">
-                  <Linkedin />
+                <a href="https://www.linkedin.com/in/shriya77/" target="_blank" rel="noreferrer">
+                  <Linkedin className="text-white" />
                 </a>
-                <a href="tel:+19453354766" target="_blank">
-                  <Phone/>
+                <a href="tel:+19453354766" target="_blank" rel="noreferrer">
+                  <Phone className="text-white" />
                 </a>
-                <a href="https://www.instagram.com/materna.health/" target="_blank">
-                  <Instagram />
-                </a>
-                <a href="mailto:shriyakkx@gmail.com" target="_blank">
-                  <Mail/>
+                <a href="mailto:shriyakkx@gmail.com" target="_blank" rel="noreferrer">
+                  <Mail className="text-white" />
                 </a>
               </div>
             </div>
           </div>
 
           <div
-            className="bg-card p-8 rounded-lg shadow-xs"
+            className="p-8 rounded-lg shadow-xs"
+            style={{ backgroundColor: "rgba(255,255,255,0.3)" }}
             onSubmit={handleSubmit}
           >
-            <h3 className="text-2xl font-semibold mb-6 text-[hsl(var(--primary))]"> Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6" style={{ color: "#01497C" }}> Send a Message</h3>
 
             <form className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium mb-2 text-[hsl(var(--foreground))]"
+                  className="block text-sm font-medium mb-2 text-[#01497C]"
                 >
                   {" "}
                   Your Name
@@ -152,7 +150,8 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  style={{ backgroundColor: "rgba(255,255,255,0.2)", backdropFilter: "blur(10px)" }}
+                  className="w-full px-4 py-3 rounded-md bg-background focus:outline-hidden focus:ring-2 focus:ring-white text-[#01497C] placeholder-[#01497C]"
                   placeholder="Ryan Trahan..."
                 />
               </div>
@@ -160,7 +159,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-2 text-[hsl(var(--foreground))]"
+                  className="block text-sm font-medium mb-2 text-[#01497C]"
                 >
                   {" "}
                   Your Email
@@ -170,15 +169,16 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  style={{ backgroundColor: "rgba(255,255,255,0.2)", backdropFilter: "blur(10px)" }}
+                  className="w-full px-4 py-3 rounded-md bg-background focus:outline-hidden focus:ring-2 focus:ring-white text-[#01497C] placeholder-[#01497C]"
+                  placeholder="materna.for.moms@gmail.com"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium mb-2 text-[hsl(var(--foreground))]"
+                  className="block text-sm font-medium mb-2 text-[#01497C]"
                 >
                   {" "}
                   Your Message
@@ -187,7 +187,8 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
+                  style={{ backgroundColor: "rgba(255,255,255,0.2)", backdropFilter: "blur(10px)" }}
+                  className="w-full px-4 py-3 rounded-md bg-background focus:outline-hidden focus:ring-2 focus:ring-white resize-none text-[#01497C] placeholder-[#01497C]"
                   placeholder="Hi, I'd like to ask about..."
                 />
               </div>
@@ -195,8 +196,9 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
+                style={{ backgroundColor: "#01497C" }}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2 text-white"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
