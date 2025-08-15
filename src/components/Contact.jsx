@@ -171,7 +171,7 @@ export const ContactSection = () => {
                   required
                   style={{ backgroundColor: "rgba(255,255,255,0.2)", backdropFilter: "blur(10px)" }}
                   className="w-full px-4 py-3 rounded-md bg-background focus:outline-hidden focus:ring-2 focus:ring-white text-[#01497C] placeholder-[#01497C]"
-                  placeholder="materna.for.moms@gmail.com"
+                  placeholder="Enter email..."
                 />
               </div>
 
