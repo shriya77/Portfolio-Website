@@ -205,9 +205,9 @@ export const AboutSection = () => {
   const translateX = -(current * totalCardWidth);
 
   return (
-    <section id="work-experience" className="py-24 px-4 relative">
+    <section id="experience" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left sm:text-center text-white">
+        <h2 className="text-3xl md:text-5xl font-bold mb-12 text-left sm:text-center text-white">
           Work Experience & Impact
         </h2>
         <div className="relative flex items-center justify-center max-w-4xl mx-auto">

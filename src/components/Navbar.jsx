@@ -9,12 +9,12 @@ const PALETTE = {
 };
 
 const navItems = [
-  { name: "About Me", href: "#about" },
-  { name: "Projects", href: "#projects" },
+  // { name: "About Me", href: "#about" },
   { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
-  { name: "Timeline", href: "#timeline" },
-  { name: "Proof", href: "#proof" },
+  // { name: "Timeline", href: "#timeline" },
+  // { name: "Proof", href: "#proof" },
   { name: "Contact", href: "#contact" },
 ];
 

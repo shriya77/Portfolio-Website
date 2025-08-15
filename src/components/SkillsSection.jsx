@@ -1,43 +1,87 @@
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 const skills = [
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
-
-  // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
-
-  // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "JavaScript", level: 90, category: "Languages" },
+  { name: "TypeScript", level: 65, category: "Languages" },
+  { name: "Python", level: 90, category: "Languages" },
+  { name: "C++", level: 80, category: "Languages" },
+  { name: "Swift", level: 30, category: "Languages" },
+  { name: "HTML/CSS", level: 100, category: "Languages" },
+  { name: "SQL", level: 70, category: "Languages" },
+  { name: "Java", level: 10, category: "Languages" },
+  { name: "Django", level: 35, category: "Frameworks" },
+  { name: "React.js", level: 90, category: "Frameworks" },
+  { name: "React Native", level: 70, category: "Frameworks" },
+  { name: "Tailwind CSS", level: 70, category: "Frameworks" },
+  { name: "Figma", level: 85, category: "Tools" },
+  { name: "Canva", level: 100, category: "Tools" },
+  { name: "Linux", level: 50, category: "Tools" },
+  { name: "AWS (Lambda, DynamoDB)", level: 45, category: "Certs & Others" },
+  { name: "Agile/Scrum", level: 80, category: "Certs & Others" },
+  { name: "UI/UX Design", level: 95, category: "Certs & Others" },
+  { name: "User Research", level: 75, category: "Certs & Others" },
+  { name: "GitHub/Git", level: 90, category: "Certs & Others" },
+  { name: "Relational Databases", level: 70, category: "Certs & Others" },
+  { name: "SEO Optimization Cert", level: 100, category: "Certs & Others" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["Languages", "Frameworks", "Tools", "Certs & Others"];
 
 export const SkillsSection = () => {
-  return (
-    <section id="notforeveryone" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">
-         WARNING: This app is <span className="text-primary">NOT</span> for:
-        </h2>
+  const [activeCategory, setActiveCategory] = useState(null);
 
-        <ul className="space-y-6 text-lg font-medium text-[hsl(var(--foreground))]">
-           <li>• Tech bros who think ChatGPT can replace empathy</li>
-           <li>• People who say “just sleep when the baby sleeps”</li>
-        </ul>
+  // Placeholder for animation logic (e.g. GSAP or Three.js)
+  // When a category is active, skills of that category expand outward in a wheel/spokes layout.
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(activeCategory === category ? null : category);
+  };
+
+  return (
+    <section
+      id="skills-wheel"
+      className="relative flex flex-col items-center justify-center py-24 px-4 bg-secondary/30 min-h-[400px]"
+    >
+      <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white text-center mb-12">My Skills</h2>
+      <div className="relative w-80 flex flex-col items-center justify-center">
+        {/* Central core categories */}
+        <div className="flex justify-center gap-8 w-full">
+          {categories.map((category) => (
+            <div key={category} className="flex flex-col items-center relative">
+              <button
+                onClick={() => handleCategoryClick(category)}
+                onMouseEnter={() => setActiveCategory(category)}
+                onMouseLeave={() => setActiveCategory(null)}
+                className={`flex-shrink-0 flex items-center justify-center w-36 h-36 rounded-full border-2 border-white bg-white/10 text-white font-semibold cursor-pointer transition-transform duration-300 text-center leading-tight
+                  ${
+                    activeCategory === category
+                      ? "scale-110 z-10 bg-white/20"
+                      : ""
+                  }`}
+                aria-pressed={activeCategory === category}
+                aria-label={`${category} skills category`}
+              >
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+              {activeCategory === category && (
+                <div className="mt-4 flex flex-col items-center w-full">
+                  {skills
+                    .filter((skill) => skill.category === category)
+                    .map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="rounded-md bg-white/20 text-white px-4 py-2 mt-2 w-56 text-center text-sm font-medium select-none"
+                        aria-label={`${skill.name} skill level ${skill.level}%`}
+                      >
+                        <span>{skill.name}</span>
+                        <span className="text-xs ml-2">{skill.level}%</span>
+                      </div>
+                    ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
