@@ -23,9 +23,14 @@ const skills = [
   { name: "GitHub/Git", level: 90, category: "Certs & Others" },
   { name: "Relational Databases", level: 70, category: "Certs & Others" },
   { name: "SEO Optimization Cert", level: 100, category: "Certs & Others" },
+  { name: "Communication", level: 95, category: "Soft Skills" },
+  { name: "Teamwork", level: 90, category: "Soft Skills" },
+  { name: "Problem Solving", level: 85, category: "Soft Skills" },
+  { name: "Adaptability", level: 80, category: "Soft Skills" },
+  { name: "Leadership", level: 85, category: "Soft Skills" },
 ];
 
-const categories = ["Languages", "Frameworks", "Tools", "Certs & Others"];
+const categories = ["Languages", "Frameworks", "Tools", "Certs & Others", "Soft Skills"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState(null);
@@ -71,10 +76,9 @@ export const SkillsSection = () => {
                       <div
                         key={skill.name}
                         className="rounded-md bg-white/20 text-white px-4 py-2 mt-2 w-56 text-center text-sm font-medium select-none"
-                        aria-label={`${skill.name} skill level ${skill.level}%`}
+                        aria-label={`${skill.name} skill`}
                       >
-                        <span>{skill.name}</span>
-                        <span className="text-xs ml-2">{skill.level}%</span>
+                        {skill.name}
                       </div>
                     ))}
                 </div>
