@@ -50,7 +50,7 @@ export const SkillsSection = () => {
       <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white text-center mb-12">My Skills</h2>
       <div className="relative w-80 flex flex-col items-center justify-center">
         {/* Central core categories */}
-        <div className="flex justify-center gap-8 w-full">
+        <div className="flex flex-row flex-wrap justify-center md:flex-nowrap md:flex-row gap-4 w-full">
           {categories.map((category) => (
             <div key={category} className="flex flex-col items-center relative">
               <button
