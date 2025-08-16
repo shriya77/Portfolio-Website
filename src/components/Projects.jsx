@@ -1,3 +1,8 @@
+import crisisguardImg from "../assets/crisisguard.png";
+import luminaImg from "../assets/lumina.png";
+import visionariImg from "../assets/visionari.png";
+import portfolioImg from "../assets/portfolio.png";
+import maternaImg from "../assets/Materna.png";
 import React, { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ExternalLink, Github } from "lucide-react";
@@ -37,7 +42,7 @@ const CATEGORIES = [
       },
       {
         title: "CrisisGuard",
-        img: "src/assets/crisisguard.png",
+        img: crisisguardImg,
         desc: "AI-powered system that detects risks like power outages, fires, and floods and provides assistance. 4th Place at Hack Reason.",
         tags: ["Prolog", "sCASP"],
         links: [
@@ -54,7 +59,7 @@ const CATEGORIES = [
     projects: [
       {
         title: "Lumina @ ACM Projects",
-        img: "src/assets/lumina.png",
+        img: luminaImg,
         desc: "Built frontend for astronomy app; integrated APIs for data visualization. Won Best Design Award in industry-judged competition.",
         tags: ["React Native", "AWS", "Figma"],
         links: [
@@ -64,7 +69,7 @@ const CATEGORIES = [
       },
       {
         title: "VisioNari",
-        img: "src/assets/visionari.png",
+        img: visionariImg,
         desc: "Leading full-stack web dev for multilingual women’s empowerment bootcamp site for 300+ users. Built registration system and boosted mobile responsiveness.",
         tags: ["HTML", "CSS", "JavaScript", "Python"],
         links: [
@@ -74,7 +79,7 @@ const CATEGORIES = [
       },
       {
         title: "Portfolio Website",
-        img: "src/assets/portfolio.png",
+        img: portfolioImg,
         desc: "The website you are seeing right now :)",
         tags: ["React", "Vite", "JavaScript"],
         links: [
@@ -89,7 +94,7 @@ const CATEGORIES = [
     projects: [
       {
         title: "Materna",
-        img: "src/assets/Materna.png",
+        img: maternaImg,
         desc: "AI powered maternal health app placed 2nd out of 350+ teams at Axxess Hackathon. Now transforming into launch ready product.",
         tags: ["React", "Vite", "Django", "Firebase", "OpenAI"],
         links: [
