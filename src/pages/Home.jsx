@@ -15,21 +15,22 @@ const PALETTE = {
 export const Home = () => {
   return (
     <>
-      <div className="hidden md:block fixed inset-0 bg-sky-500/70 pointer-events-none z-0"></div>
+      <div className="fixed inset-0 bg-sky-500/70 pointer-events-none z-0"></div>
 
       <div className="relative z-10 min-h-screen text-foreground overflow-x-hidden">
-        <Navbar />
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
         {/* Main Content */}
         <main>
-          <HeroSection />
-          <AboutSection />
-          <ProjectsSection />
-          <SkillsSection />
-          <ContactSection /> 
+          {<HeroSection />}
+          {<AboutSection />}
+          {<ProjectsSection />}
+          {<SkillsSection />}
+          {<ContactSection />}
         </main>
 
-        {/* Footer */}
-        <Footer />
+        {<Footer />}
       </div>
     </>
   );

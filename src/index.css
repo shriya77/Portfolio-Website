@@ -98,6 +98,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  .fixed.w-full.h-full.bg-white,
+  .absolute.w-full.h-full.bg-white {
+    display: none !important;
+  }
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
@@ -207,3 +214,4 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 25px rgba(223, 166, 159, 0.25);
 }
+

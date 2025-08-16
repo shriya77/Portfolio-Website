@@ -297,36 +297,40 @@ export const HeroSection = () => {
     color: "#ffffff",
   };
 
-  const bubbleContainerStyle = {
-    position: "relative",
-    display: "inline-block",
-    maxWidth: "90vw",
-    backgroundColor: "rgba(255, 255, 255, 1)",
-    borderRadius: "16px",
-    padding: "0.75rem 1.25rem",
-    marginBottom: "1.5rem",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-    color: "#111827",
-    fontFamily: "'Courier New', Courier, monospace",
-    fontSize: "1.25rem",
-    fontWeight: "500",
-    whiteSpace: "pre-wrap",
-    textAlign: "center",
-    alignSelf: "center",
-    zIndex: 2,
-  };
+const bubbleContainerStyle = {
+  position: "relative",
+  display: "inline-block",
+  maxWidth: typeof window !== "undefined" && window.innerWidth < 768 ? "80vw" : "90vw",
+  backgroundColor: typeof window !== "undefined"
+    ? (window.innerWidth < 768 ? "rgba(255, 255, 255, 0.3)" : "rgba(255, 255, 255, 1)")
+    : "rgba(255, 255, 255, 1)",
+  borderRadius: "16px",
+  padding: "0.75rem 1.25rem",
+  marginBottom: "1.5rem",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+  color: "#111827",
+  fontFamily: "'Courier New', Courier, monospace",
+  fontSize: "1.25rem",
+  fontWeight: "500",
+  whiteSpace: "pre-wrap",
+  textAlign: "center",
+  alignSelf: "center",
+  zIndex: 1,
+};
 
   const bubbleTailStyle = {
-    position: "absolute",
-    bottom: 0,
-    left: "50%",
-    transform: "translateX(-50%)",
-    width: 0,
-    height: 0,
-    borderTop: "12px solid rgba(255, 255, 255, 1)",
-    borderRight: "12px solid transparent",
-    filter: "drop-shadow(0 2px 2px rgba(0,0,0,0.05))",
-  };
+  position: "absolute",
+  bottom: 0,
+  left: "50%",
+  transform: "translateX(-50%)",
+  width: 0,
+  height: 0,
+  borderTop: typeof window !== "undefined" && window.innerWidth < 768
+    ? "12px solid rgba(255,255,255,0.3)"
+    : "12px solid rgba(255,255,255,1)",
+  borderRight: "12px solid transparent",
+  filter: "drop-shadow(0 2px 2px rgba(0,0,0,0.05))",
+};
 
   const messageWrapperStyle = {
     display: "flex",
@@ -363,15 +367,16 @@ export const HeroSection = () => {
     position: "absolute",
     top: "1rem",
     right: "1rem",
-    backgroundColor: "transparent",
+    backgroundColor: PALETTE.deepOceanBlue,
     border: `2px solid ${PALETTE.deepOceanBlue}`,
-    color: PALETTE.deepOceanBlue,
-    padding: "0.5rem 1rem",
+    color: "#ffffff",
+    padding: "0.75rem 1.25rem",
     borderRadius: "9999px",
-    fontWeight: "600",
+    fontWeight: "700",
     cursor: "pointer",
     userSelect: "none",
-    transition: "background-color 0.3s, color 0.3s",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+    transition: "background-color 0.3s, color 0.3s, transform 0.2s",
     touchAction: "manipulation",
     zIndex: 3,
   };
@@ -542,7 +547,6 @@ export const HeroSection = () => {
           {showTypingIndicator && !skipped && (
             <TypingIndicator />
           )}
-          <div style={bubbleTailStyle} />
         </div>
       </div>
 
