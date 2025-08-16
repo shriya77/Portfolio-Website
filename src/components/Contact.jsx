@@ -106,15 +106,15 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-white" />{" "}
                 </div>
                 <div>
-                  <a className="text-white hover:text-white transition-colors pt-1">
-                    Richardson, Texas, United States
+                  <a className="text-white text-left hover:text-white transition-colors pt-1">
+                  Richardson, Texas
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4 text-left text-white"> Connect With Us</h4>
+              <h4 className="font-medium mb-4 text-left text-white"> Connect With Me</h4>
               <div className="flex space-x-4 justify-left">
                 <a href="https://www.linkedin.com/in/shriya77/" target="_blank" rel="noreferrer">
                   <Linkedin className="text-white" />
