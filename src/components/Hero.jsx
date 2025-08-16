@@ -2,16 +2,16 @@ import { useEffect, useState, useRef } from "react";
 
 const getTimeAwareMessage = () => {
   const hour = new Date().getHours();
-  if (hour >= 5 && hour < 12) return "Good morning.";
-  if (hour >= 12 && hour < 17) return "Good afternoon.";
-  if (hour >= 17 && hour < 23) return "Good evening."
-  return "Burning the midnight oil?";
+  if (hour >= 5 && hour < 12) return "Good morning ⛅️";
+  if (hour >= 12 && hour < 17) return "Good afternoon 🌤️";
+  if (hour >= 17 && hour < 23) return "Good evening 🌙"
+  return "Burning the midnight oil? 😴";
 };
 
 const messages = [
   getTimeAwareMessage(),
-  "I've been expecting you.",
-  "I build tech that saves lives.",
+  "I've been expecting you",
+  "I build tech that saves lives",
   "Want to see how?",
 ];
 
