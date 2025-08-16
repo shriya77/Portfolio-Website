@@ -366,11 +366,12 @@ const bubbleContainerStyle = {
   const skipButtonStyle = {
     position: "absolute",
     top: "1rem",
-    right: "1rem",
+    left: "50%",
+    transform: "translateX(-50%)",
     backgroundColor: PALETTE.deepOceanBlue,
     border: `2px solid ${PALETTE.deepOceanBlue}`,
     color: "#ffffff",
-    padding: "0.75rem 1.25rem",
+    padding: "0.5rem 1rem",
     borderRadius: "9999px",
     fontWeight: "700",
     cursor: "pointer",
@@ -519,19 +520,6 @@ const bubbleContainerStyle = {
         );
       })}
 
-      {/* Skip Intro Button */}
-      {!finished && (
-        <button
-          type="button"
-          onClick={handleSkip}
-          style={skipButtonStyle}
-          onMouseEnter={skipButtonHover}
-          onMouseLeave={skipButtonUnhover}
-          aria-label="Skip intro"
-        >
-          Skip intro
-        </button>
-      )}
 
       <h1 style={headingStyle}>Hi, I’m Shriya.</h1>
 
@@ -542,10 +530,35 @@ const bubbleContainerStyle = {
       />
 
       <div style={messageWrapperStyle} aria-live="polite" aria-atomic="true" role="text">
-        <div style={bubbleContainerStyle}>
-          {displayedText}
-          {showTypingIndicator && !skipped && (
-            <TypingIndicator />
+        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <div style={bubbleContainerStyle}>
+            {displayedText}
+            {showTypingIndicator && !skipped && <TypingIndicator />}
+          </div>
+          {!finished && (
+            <button
+              type="button"
+              onClick={handleSkip}
+              style={{
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                padding: 0,
+              }}
+              aria-label="Fast forward intro"
+            >
+              <img
+                src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/fast-forward-icon.png"
+                alt="Fast forward"
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  display: "block",
+                  verticalAlign: "middle",
+                  marginTop: "-10px"
+                }}
+              />
+            </button>
           )}
         </div>
       </div>
