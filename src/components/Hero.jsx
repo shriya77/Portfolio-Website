@@ -523,12 +523,6 @@ const bubbleContainerStyle = {
 
       <h1 style={headingStyle}>Hi, I’m Shriya.</h1>
 
-      <img
-        src="https://img.freepik.com/premium-vector/caution-work-progress-construction-zone_24886-2804.jpg"
-        alt="Work in progress"
-        style={{ maxWidth: "300px", width: "80%", margin: "1.5rem auto", display: "block", borderRadius: "12px" }}
-      />
-
       <div style={messageWrapperStyle} aria-live="polite" aria-atomic="true" role="text">
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <div style={bubbleContainerStyle}>
