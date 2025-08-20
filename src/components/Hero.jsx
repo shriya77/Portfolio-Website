@@ -117,10 +117,18 @@ export const HeroSection = () => {
       let horizontal, top, side;
       do {
         side = Math.random() < 0.5 ? "left" : "right";
-        horizontal = side === "left"
-          ? randFloat(3, 22)
-          : randFloat(78, 94);
-        top = randFloat(60, 80);
+        // Clamp horizontal and top for mobile so circles stay in viewport
+        // Use new percent ranges for left/right
+        const horizontalPercent =
+          side === "left"
+            ? randFloat(3, 85) // reduced max to prevent overflow
+            : randFloat(15, 97); // increased min from 78 to 15 for mobile
+        const topPercent =
+          typeof window !== "undefined" && window.innerWidth < 768
+            ? randFloat(75, 90) // start lower on mobile
+            : randFloat(60, 90); // keep existing range for desktop
+        horizontal = horizontalPercent;
+        top = topPercent;
         attempts++;
         // Check overlap with existing floatingCircles (parseFloat for %)
       } while (
