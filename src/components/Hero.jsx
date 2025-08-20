@@ -708,24 +708,49 @@ const bubbleContainerStyle = {
         </div>
         {/* Modal/Card for floating circle info */}
         {activeCircle && (
-          <div style={{
-            position: "fixed",
-            top: "83%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            background: "rgba(255, 255, 255, 0.2)",
-            backdropFilter: "blur(12px) saturate(180%)",
-            WebkitBackdropFilter: "blur(12px) saturate(180%)",
-            padding: "2rem",
-            borderRadius: "16px",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
-            zIndex: 9999999999,
-            maxWidth: "90%",
-            textAlign: "center",
-            color: "#fff",
-            fontFamily: "'Poppins', sans-serif"
-          }}>
+          <div
+            style={{
+              position: "fixed",
+              top: "auto", // will set dynamically
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "80vw"
+                  : "auto",
+              maxWidth: "90%",
+              maxHeight:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "50vh"
+                  : "auto",
+              overflowY:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "auto"
+                  : "visible",
+              background: "rgba(255, 255, 255, 0.2)",
+              backdropFilter: "blur(12px) saturate(180%)",
+              WebkitBackdropFilter: "blur(12px) saturate(180%)",
+              padding:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "1rem 1.5rem"
+                  : "2rem",
+              borderRadius:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "12px"
+                  : "16px",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
+              zIndex: 9999999999,
+              textAlign: "center",
+              color: "#fff",
+              fontFamily: "'Poppins', sans-serif",
+              fontSize:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "0.9rem"
+                  : "1rem",
+              lineHeight: 1.3,
+            }}
+          >
             <button
               onClick={() => setActiveCircle(null)}
               style={{
@@ -748,9 +773,12 @@ const bubbleContainerStyle = {
             </button>
             <h3>{activeCircle}</h3>
             <p>
-              {activeCircle === "What I study" && "Computer Science with a minor in Business Intelligence & Analytics at UTD. I'm a sophomore with a 3.97 GPA! But my studying never stops at university. I've done short courses online as well as learnt AI/ML through guided projects and externships."}
-              {activeCircle === "About me" && "I love building solutions that make an impact. I’m currently leading Materna, a maternal health startup that began as a hackathon project and is growing into a real product. Through internships and externships, I’ve built web platforms, automated workflows, and collaborated on features from idea to launch. My interests span frontend engineering, AI, and applying tech in overlooked spaces like healthcare. My goal is simple: keep learning, keep building, and grow as an engineer while creating products that matter to real people."}
-              {activeCircle === "My hobbies" && "I love working out, F1, cooking, fashion, music, and traveling."}
+              {activeCircle === "What I study" &&
+                "Computer Science with a minor in Business Intelligence & Analytics at UTD. I'm a sophomore with a 3.97 GPA! But my studying never stops at university. I've done short courses online as well as learnt AI/ML through guided projects and externships."}
+              {activeCircle === "About me" &&
+                "I love building solutions that make an impact. I’m currently leading Materna, a maternal health startup that began as a hackathon project and is growing into a real product. Through internships and externships, I’ve built web platforms, automated workflows, and collaborated on features from idea to launch. My interests span frontend engineering, AI, and applying tech in overlooked spaces like healthcare. My goal is simple: keep learning, keep building, and grow as an engineer while creating products that matter to real people."}
+              {activeCircle === "My hobbies" &&
+                "I love working out, F1, cooking, fashion, music, and traveling."}
             </p>
           </div>
         )}
