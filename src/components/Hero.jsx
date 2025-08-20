@@ -10,7 +10,6 @@ const getTimeAwareMessage = () => {
 
 const messages = [
   getTimeAwareMessage(),
-  "I've been expecting you",
   "I build tech that saves lives",
   "Want to see how?",
 ];
