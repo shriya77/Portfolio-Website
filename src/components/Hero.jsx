@@ -1,4 +1,14 @@
 import { useEffect, useState, useRef } from "react";
+// Floating circles effect texts
+const floatingCircleTexts = [
+  "What I study",
+  "About me",
+  "My hobbies"
+];
+// Helper for random float
+function randFloat(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
 const getTimeAwareMessage = () => {
   const hour = new Date().getHours();
@@ -20,6 +30,12 @@ const PALETTE = {
 };
 
 export const HeroSection = () => {
+  // Floating circles state
+  const [floatingCircles, setFloatingCircles] = useState([]);
+  const floatingContainerRef = useRef(null);
+  // Active floating circle modal state
+  const [activeCircle, setActiveCircle] = useState(null);
+
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [showTypingIndicator, setShowTypingIndicator] = useState(true);
@@ -65,10 +81,87 @@ export const HeroSection = () => {
           opacity: 0;
         }
       }
+      @keyframes floatUpFade {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 0.28;
+        }
+        70% {
+          opacity: 0.22;
+        }
+        90% {
+          opacity: 0.08;
+        }
+        100% {
+          transform: translateY(-160px) scale(1.1);
+          opacity: 0;
+        }
+      }
     `;
     document.head.appendChild(styleTag);
     return () => {
       document.head.removeChild(styleTag);
+    };
+  }, []);
+  // Floating circles effect
+  useEffect(() => {
+    let id = 0;
+    let timer;
+    let cleanup = false;
+    const SPAWN_INTERVAL = 1800; // ms
+    const CIRCLE_LIFETIME = 3400; // ms
+    function spawnCircle() {
+      // Randomize left/right, vertical start, color, text (size/fontSize fixed)
+      let attempts = 0;
+      const maxAttempts = 5;
+      let horizontal, top, side;
+      do {
+        side = Math.random() < 0.5 ? "left" : "right";
+        horizontal = side === "left"
+          ? randFloat(3, 22)
+          : randFloat(78, 94);
+        top = randFloat(60, 80);
+        attempts++;
+        // Check overlap with existing floatingCircles (parseFloat for %)
+      } while (
+        floatingCircles.some(
+          c =>
+            Math.abs(parseFloat(c.left) - horizontal) < 10 &&
+            Math.abs(parseFloat(c.top) - top) < 10
+        ) && attempts < maxAttempts
+      );
+      const size = 100; // fixed circle size in px
+      const text = floatingCircleTexts[Math.floor(Math.random() * floatingCircleTexts.length)];
+      const color = "rgba(37,99,235,0.10)";
+      const fontColor = "#01497C";
+      const fontSize = 1; // fixed font size in rem
+      const newCircle = {
+        id: id++,
+        left: `${horizontal}%`,
+        top: `${top}%`,
+        size,
+        text,
+        color,
+        fontColor,
+        fontSize,
+        side,
+        createdAt: Date.now(),
+      };
+      setFloatingCircles((circles) => [...circles, newCircle]);
+      // Remove after animation
+      setTimeout(() => {
+        setFloatingCircles((circles) => circles.filter((c) => c.id !== newCircle.id));
+      }, CIRCLE_LIFETIME);
+    }
+    function loop() {
+      if (cleanup) return;
+      spawnCircle();
+      timer = setTimeout(loop, SPAWN_INTERVAL + randFloat(-500, 400));
+    }
+    loop();
+    return () => {
+      cleanup = true;
+      clearTimeout(timer);
     };
   }, []);
 
@@ -254,10 +347,20 @@ export const HeroSection = () => {
     alignItems: "center",
     padding: "2rem 1.5rem",
     overflow: "hidden",
-    // backgroundColor: "#f9fafb",
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     color: "#111827",
     textAlign: "center",
+  };
+
+  const floatingContainerStyle = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: 1, // above background, below modal
+    pointerEvents: "none",
+    overflow: "visible",
   };
 
   const rippleContainerStyle = {
@@ -467,6 +570,55 @@ const bubbleContainerStyle = {
       {/* Glow effect */}
       <div ref={glowRef} style={glowStyle} />
 
+      {/* Floating circles effect */}
+      <div ref={floatingContainerRef} style={floatingContainerStyle}>
+        {floatingCircles.map((circle) => (
+          <div
+            key={circle.id}
+            onClick={() => setActiveCircle(circle.text)}
+            style={{
+              position: "absolute",
+              left: circle.left,
+              top: circle.top,
+              width: circle.size,
+              height: circle.size,
+              background: "rgba(37,99,235,0.65)", // increased alpha
+              color: "#ffffff",
+              border: "2px solid rgba(255,255,255,0.9)",
+              borderRadius: "50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: `${circle.fontSize}rem`,
+              fontWeight: 700,
+              opacity: 1,
+              userSelect: "none",
+              pointerEvents: "auto",
+              boxShadow: "0 4px 16px 0 rgba(37,99,235,0.12)",
+              animation: "floatUpFade 3.4s linear forwards",
+              zIndex: 1,
+              letterSpacing: "0.01em",
+              textAlign: "center",
+              textShadow: "0 3px 8px rgba(0,0,0,0.9)",
+              filter: "none",
+              willChange: "transform, opacity",
+              padding: "0.6em 1em",
+              minWidth: "90px",
+              lineHeight: 1.2,
+              transition: "background 0.2s",
+              boxSizing: "border-box",
+              cursor: "pointer",
+              // Slight nudge for left/right
+              transform: circle.side === "left"
+                ? "translateX(-10%)"
+                : "translateX(10%)",
+            }}
+          >
+            <span style={{ opacity: 1 }}>{circle.text}</span>
+          </div>
+        ))}
+      </div>
+
       {/* Ripple effect container */}
       <div ref={rippleContainerRef} style={rippleContainerStyle} />
 
@@ -554,6 +706,54 @@ const bubbleContainerStyle = {
             </button>
           )}
         </div>
+        {/* Modal/Card for floating circle info */}
+        {activeCircle && (
+          <div style={{
+            position: "fixed",
+            top: "83%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            background: "rgba(255, 255, 255, 0.2)",
+            backdropFilter: "blur(12px) saturate(180%)",
+            WebkitBackdropFilter: "blur(12px) saturate(180%)",
+            padding: "2rem",
+            borderRadius: "16px",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
+            zIndex: 9999999999,
+            maxWidth: "90%",
+            textAlign: "center",
+            color: "#fff",
+            fontFamily: "'Poppins', sans-serif"
+          }}>
+            <button
+              onClick={() => setActiveCircle(null)}
+              style={{
+                position: "absolute",
+                top: "0.5rem",
+                right: "0.75rem",
+                background: "rgba(255,255,255,0.3)",
+                border: "none",
+                borderRadius: "50%",
+                width: "32px",
+                height: "32px",
+                fontSize: "1.25rem",
+                fontWeight: "bold",
+                color: "#fff",
+                cursor: "pointer",
+                backdropFilter: "blur(6px)",
+              }}
+            >
+              &times;
+            </button>
+            <h3>{activeCircle}</h3>
+            <p>
+              {activeCircle === "What I study" && "Computer Science with a minor in Business Intelligence & Analytics at UTD. I'm a sophomore with a 3.97 GPA! But my studying never stops at university. I've done short courses online as well as learnt AI/ML through guided projects and externships."}
+              {activeCircle === "About me" && "I love building solutions that make an impact. I’m currently leading Materna, a maternal health startup that began as a hackathon project and is growing into a real product. Through internships and externships, I’ve built web platforms, automated workflows, and collaborated on features from idea to launch. My interests span frontend engineering, AI, and applying tech in overlooked spaces like healthcare. My goal is simple: keep learning, keep building, and grow as an engineer while creating products that matter to real people."}
+              {activeCircle === "My hobbies" && "I love working out, F1, cooking, fashion, music, and traveling."}
+            </p>
+          </div>
+        )}
       </div>
 
       {showCTAs && (
